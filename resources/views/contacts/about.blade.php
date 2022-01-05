@@ -47,7 +47,7 @@
                 <h2>ALEX</h2>
                 <p>Expert in children's & teenager's literature</p>
                 <div class="card " style="width:100%">
-                    <img class="card-img-top" src={{asset('css/images/team/alex.jpg')}} alt="Alex" style="width:100%;height:100%">
+                    <img class="card-img-top" src="{{asset('css/images/team/alex.jpg')}}" alt="Alex" style="width:100%;height:100%">
                     <div class="card-body">
                         <h4 class="card-title">About ALEX:</h4>
                         <p class="card-text">After studying pedagogy at Oxford University, Alex began working as a teacher and mentor.
