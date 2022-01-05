@@ -19,7 +19,7 @@
 
         <div class="mb-3 mt-3 ">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email"  name="email"pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"  required value="{{old('email',@$model->email)}}">
+            <input type="email" class="form-control" id="email" placeholder="Enter email"  name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"  required value="{{old('email',@$model->email)}}">
         </div>
         <div class="mb-3 mt-3">
             <label for="phone">Phone number:</label>

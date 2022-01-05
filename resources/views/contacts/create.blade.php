@@ -22,7 +22,7 @@
     </div>
     <script>
         function validateForm() {
-            if (document.contact.subject.value == "") {
+            if (document.contact.subject.value == null) {
                 alert("Enter a subject of your message is required");
                 document.contact.subject.focus();
                 return false;
@@ -34,7 +34,7 @@
                 document.contact.subject.focus();
                 return false;
             }
-            if (document.contact.message.value == "") {
+            if (document.contact.message.value == null) {
                 alert("Enter your message is required");
                 document.contact.message.focus();
                 return false;

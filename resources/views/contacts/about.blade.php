@@ -16,7 +16,7 @@
                 <h2>NIKKI</h2>
                 <p>Expert in historical & romantic novels and short stories</p>
                 <div class="card " style="width:100%">
-                    <img class="card-img-top" src={{asset('css/images/team/nikki.jpg')}} alt="Nikki" style="width:100%;height:100%">
+                    <img class="card-img-top" src="{{asset('css/images/team/nikki.jpg')}}" alt="Nikki" style="width:100%;height:100%">
                     <div class="card-body">
                         <h4 class="card-title">About NIKKI:</h4>
                         <p class="card-text">Nikki studied law at Cambridge University in London. She wanted to share her love of books,
@@ -32,7 +32,7 @@
                 <h2>DANIEL</h2>
                 <p>Expert in children's & teenager's literature</p>
                 <div class="card " style="width:100%">
-                    <img class="card-img-top" src={{asset('css/images/team/danko.jpg')}} alt="Daniel" style="width:100%;height:100%">
+                    <img class="card-img-top" src="{{asset('css/images/team/danko.jpg')}}" alt="Daniel" style="width:100%;height:100%">
                     <div class="card-body">
                         <h4 class="card-title">About DANIEL:</h4>
                         <p class="card-text">This is our Daniel, an IT specialist from Harvard who works for an international IT company.
@@ -47,7 +47,7 @@
                 <h2>ALEX</h2>
                 <p>Expert in children's & teenager's literature</p>
                 <div class="card " style="width:100%">
-                    <img class="card-img-top" src={{asset('css/images/team/alex.jpg')}} alt="Alex" style="width:100%;height:100%">
+                    <img class="card-img-top" src="{{asset('css/images/team/alex.jpg')}}" alt="Alex" style="width:100%;height:100%">
                     <div class="card-body">
                         <h4 class="card-title">About ALEX:</h4>
                         <p class="card-text">After studying pedagogy at Oxford University, Alex began working as a teacher and mentor.
@@ -62,7 +62,7 @@
             <div class="col-sm-4 questions p-3">
                 <h1 class="questions-h">CONTACT</h1>
                 <div class="card " style="width:100%">
-                    <img class="card-img-top" src={{asset('css/images/team/bookstore.jpg')}} alt="bookstore" style="width:100%;height:100%;float: left">
+                    <img class="card-img-top" src="{{asset('css/images/team/bookstore.jpg')}}" alt="bookstore" style="width:100%;height:100%;float: left">
                     <div class="card-body">
                         <h4 class="card-title">Where to find us?</h4>
                         <p class="card-text">
@@ -90,5 +90,4 @@
     </div>
 
     </body>
-</html>
 @endsection
