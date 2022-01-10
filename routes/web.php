@@ -21,6 +21,7 @@ use App\Http\Controllers\Auth\LoginController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/about', function () {
     return view('contacts/about');
 
