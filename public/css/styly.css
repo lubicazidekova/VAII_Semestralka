@@ -7,14 +7,14 @@
     color: white;
 }
 
-.books{
+.BG-IMAGE_MAIN{
     background-image: url("images/knihynapolici.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-
 }
+
 .books2{
     background-image: url("images/knihy.jpg");
     background-size: cover;
@@ -128,49 +128,12 @@
     transform: translate(-50%, -50%);
     z-index: 2;
 }
-:root {
-    --error-color: #dc3545;
-    --success-color: #28a745;
-    --warning-color: #ffc107;
-}
-.form-field input {
-    border: solid 2px #f0f0f0;
-    border-radius: 3px;
-    padding: 10px;
-    margin-bottom: 5px;
-    font-size: 14px;
-    display: block;
-    width: 100%;
-}
-
-.form-field input:focus {
-    outline: none;
-}
-
-.form-field.error input {
-    border-color: var(--error-color);
-}
-
-.form-field.success input {
-    border-color: var(--success-color);
-}
-
-
-.form-field small {
-    color: var(--error-color);
-}
-
 
 /*----------Events----------*/
 .pozadie {
     background-color: black;
 }
 
-.navbar-custom {
-    background-color: black;
-    font-family: "Times New Roman";
-    color: white;
-}
 
 .obrazok {
     width: 100%;
