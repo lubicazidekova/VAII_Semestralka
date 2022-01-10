@@ -3,7 +3,7 @@
 /* Modify the background color in navbar*/
 .navbar-custom {
     background-color: black;
-    font-family: "Times New Roman";
+    font-family: "Times New Roman", serif;
     color: white;
 }
 
@@ -154,14 +154,14 @@
 
 .nadpis1{
     text-align: center;
-    font-family: "Monotype Corsiva";
+    font-family: "Monotype Corsiva",serif;
     color: silver;
     background-color: red;
     font-style: oblique;
 }
 .nadpis2{
     text-align: center;
-    font-family: "Arial Black";
+    font-family: "Arial Black",serif;
     color: black;
     background-color: silver;
     font-style: oblique;
@@ -169,13 +169,13 @@
 .podnadpis1{
     border: 2px solid red;
     text-align: center;
-    font-family: "Monotype Corsiva";
+    font-family: "Monotype Corsiva",serif;
     color: red;
 }
 .podnadpis2{
     border: 2px solid silver;
     text-align: center;
-    font-family: "Arial Black";
+    font-family: "Arial Black",serif;
     color: silver;
 }
 
@@ -186,6 +186,7 @@
     text-align: center;
 }
 
+/*noinspection CssNoGenericFontName*/
 .team-h{
     background-color: black;
     font-family: "Times New Roman";
@@ -198,7 +199,7 @@
 }
 .questions-h{
     background-color: red;
-    font-family: "Times New Roman";
+    font-family: "Times New Roman", serif;
     color: silver;
     text-align: center;
 
