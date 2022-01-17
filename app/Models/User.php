@@ -11,6 +11,16 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+    public function articles(){
+        return $this->hasMany('App\Models\Article');
+    }
+    public function comments(){
+        return $this->hasMany('App\Models\Comment');
+    }
+    public function reviews(){
+        return $this->hasMany('App\Models\Review');
+    }
+
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -46,4 +56,6 @@ class User extends Authenticatable
 
        $this->attributes['password'] = Hash::make($password);
    }
+
+
 }

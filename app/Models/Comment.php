@@ -9,7 +9,7 @@ class Comment extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'text', 'article_id','user_id'
+        'text', 'article_id'
     ];
 
     public function article(){
@@ -18,4 +18,5 @@ class Comment extends Model
     public function user(){
         return $this->belongsTo('App\Models\User');
     }
+
 }
