@@ -83,6 +83,7 @@ class InspirationController extends Controller
     public function destroy($id)
     {
         $inspiration=Inspiration::find($id);
+        $this->authorize('delete',$inspiration);
         $inspiration->delete();
         return redirect()->route('inspiration.index');
     }

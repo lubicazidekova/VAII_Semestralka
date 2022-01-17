@@ -51,7 +51,7 @@
                     <h1 class="team-h"> {{$inspiration->title}} </h1>
                     <div class="card " style="width:100%;position: relative">
                         <img class="card-img-top" src="css/images/inspiration/{{$inspiration->image}}" alt="{{$inspiration->title}}" style="width:100%;height:auto">
-
+                @can('delete',$inspiration)
                             <h1 class="text text-right " title="delete" data-method="DELETE" >
                                 <a style="color: white;position: absolute;top:-0.5vw;right:0.5vw" href="{{route('inspiration.delete',[$inspiration->id])}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -60,7 +60,7 @@
                                     </svg>
                                 </a>
                             </h1>
-
+                @endcan
                     </div>
                 </div>
             @endforeach
