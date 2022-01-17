@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +19,7 @@ class CommentController extends Controller
     public function index()
     {
         return view('comment.index',[
-            'comments'=> Comment::all(),
+           'comments'=> Comment::all(),
         ]);
     }
 
@@ -37,7 +41,16 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'text' => 'required',
+            'article_id' => 'required|integer',
+        ]);
+
+        auth()->user()->comments()->create($request->all());
+        return redirect()->back();
+
+
+
     }
 
     /**
@@ -48,7 +61,10 @@ class CommentController extends Controller
      */
     public function show(Comment $comment)
     {
-        //
+        return view('comment.show',[
+            'comment'=>$comment
+
+        ]);
     }
 
     /**
@@ -59,7 +75,11 @@ class CommentController extends Controller
      */
     public function edit(Comment $comment)
     {
-        //
+        return view('comments.edit', [
+            'action' => route('comment.update', $comment->id),
+            'method' => 'put',
+            'model' => $comment
+        ]);
     }
 
     /**
@@ -71,7 +91,14 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-        //
+        $this->authorize('update', $comment);
+        $request->validate([
+            'text' => 'required' ,
+            'article_id' => 'required|integer',
+        ]);
+
+        $comment->update($request->all());
+        return redirect()->url();
     }
 
     /**
@@ -80,8 +107,12 @@ class CommentController extends Controller
      * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comment $comment)
+    public function destroy($id)
     {
-        //
+        $comment=Comment::find($id);
+        $this->authorize('delete', $comment);
+        $comment->delete();
+        return redirect()->back();
+
     }
 }
