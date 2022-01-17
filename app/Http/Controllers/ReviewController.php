@@ -64,7 +64,7 @@ class ReviewController extends Controller
     {
         $request->validate([
             'text'=>'required',
-            'rating'=>'required|numeric|',
+            'rating'=>'required|numeric|min:1|max:5',
 
         ]);
         auth()->user()->reviews()->updateOrCreate(['id' => $request->review_id],

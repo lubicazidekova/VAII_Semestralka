@@ -40,9 +40,9 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-        'title'=>'required|unique',
-        'subtitle'=>'required|unique',
-        'image'=>'required',
+        'title'=>'required|unique:articles|min:3|max:30',
+        'subtitle'=>'required|unique:articles|min:3|max:100',
+        'image'=>'required|mimes:jpg,gif,png',
         'text'=>'required',
     ]);
 
@@ -88,9 +88,10 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
+        $this->authorize('update', $article);
         $request->validate([
-        'title'=>'required',
-        'subtitle'=>'required',
+        'title'=>'required|min:3|max:50',
+        'subtitle'=>'required|min:3|max:100',
         'image'=>'required',
         'text'=>'required',
     ]);
@@ -106,7 +107,9 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
+
         $article=Article::find($id);
+        $this->authorize('delete', $article);
         $article->delete();
         return redirect()->route('article.index');
     }
