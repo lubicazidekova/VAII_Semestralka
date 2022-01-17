@@ -26,7 +26,7 @@
             <input type="password" class="form-control" id="password-confirm" name="password_confirmation" required autocomplete="new-password" placeholder="Password">
         </div>
     </div>
-    <div class="form-group row" style="padding-left: 90%">
+    <div class="form-group row" style="padding-left: 80%">
         <button type="submit" class="btn btn-black">Submit</button>
     </div>
 

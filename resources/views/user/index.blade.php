@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <body class="books2 " style="color: white">
-    <div class="container form-margin">
+    <div class="container form-margin-users" >
         <div class="row justify-content-center" >
-            <div class="col-md-8 ">
+            <div class="col-lg-8"  >
                 <div class="card form-margin bg-text_users ">
                     <div class="card-header ">{{ __('USERS') }} </div>
 

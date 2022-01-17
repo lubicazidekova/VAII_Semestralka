@@ -53,7 +53,7 @@
                     in collaboration with the City of Ljubljana and Ljubljana Castle.</p>
             </div>
             <div class="col-sm-5">
-                <img class="event-obr " src={{asset('css/images/events/angryBirds.gif')}} alt="AngryBirds">
+                <img class="event-obr " src="{{asset('css/images/events/angryBirds.gif')}}" alt="Angry Birds">
             </div>
         </div>
         <!--3 Event-->
@@ -94,6 +94,4 @@
 
 
     </div>
-    </body>
-    </html>
 @endsection
