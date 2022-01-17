@@ -8,6 +8,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\InspirationController;
 
 
 /*
@@ -28,10 +29,8 @@ Route::get('/', function () {
 
 
 //INSPIRATION PAGE ROUTE
-Route::get('/inspiration', function () {
-    return view('inspiration/inspiration');
-})->name('inspiration');
-
+Route::resource('inspiration', UserController::class);
+Route::get('/inspiration', [InspirationController::class, 'index'])->name('inspiration.index');
 //EVENTS PAGE ROUTE
 Route::get('/events', function () {
     return view('events/events');
@@ -82,6 +81,7 @@ Route::group(['middleware'=>['auth']], function () {
         Route::get('comments/{id}/edit', [ArticleController::class, 'edit'])->name('comment.edit');
         Route::get('comments/{id}', [ArticleController::class, 'update'])->name('comment.update');
 
+        Route::get('inspiration/{id}/delete', [InspirationController::class, 'destroy'])->name('inspiration.delete');
 
 });
 
