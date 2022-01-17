@@ -46,92 +46,24 @@
 
         <div class="row ">
 
-            <div class="col-sm-2  p-3  text-white" data-filterable="book historical">
-                <h1 class="team-h"> Romeo & Juliet </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/romeo.jpg')}}" alt="romeo" style="width:100%;height:100%">
-                </div>
-            </div>
+            @foreach($inspirations as $inspiration)
+                <div class="col-sm-2  p-3  text-white" data-filterable="{{$inspiration->type}} {{$inspiration->genre}}">
+                    <h1 class="team-h"> {{$inspiration->title}} </h1>
+                    <div class="card " style="width:100%;position: relative">
+                        <img class="card-img-top" src="css/images/inspiration/{{$inspiration->image}}" alt="{{$inspiration->title}}" style="width:100%;height:auto">
 
-            <div class="col-sm-2  p-3  text-white" data-filterable="movie romance">
-                <h1 class="team-h">The Princess Diaries </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/princess.jpg')}}" alt="princess" style="width:100%;height:100%">
-                </div>
-            </div>
+                            <h1 class="text text-right " title="delete" data-method="DELETE" >
+                                <a style="color: white;position: absolute;top:-0.5vw;right:0.5vw" href="{{route('inspiration.delete',[$inspiration->id])}}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                                    </svg>
+                                </a>
+                            </h1>
 
-            <div class="col-sm-2 p-3 m-t-5 text-white " style="padding-bottom: 3vw" data-filterable="book cartoon">
-                <h1 class="team-h"> Mystery Club s.r.o </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/klubzahad.jpg')}}" alt="klubzahad" style="width:100%;height:100%">
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-sm-2  p-3  text-white" data-filterable="book romance">
-                <h1 class="team-h">Pride & Prejudice </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/pride.jpg')}}" alt="pride" style="width:100%;height:100%">
-                </div>
-            </div>
-
-            <div class="col-sm-2  p-3  text-white" data-filterable="movie historical">
-                <h1 class="team-h">The Gladiator Movie </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/gladiator.jpg')}}" alt="gladiator" style="width:100%;height:100%">
-                </div>
-            </div>
-
-            <div class="col-sm-2  p-3  text-white" data-filterable="movie action">
-                <h1 class="team-h">The RED 2 Movie </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/red2.jpg')}}" alt="red2" style="width:100%;height:100%">
-                </div>
-            </div>
-
-            <div class="col-sm-2 p-3 column text-white" data-filterable="movie cartoon">
-                <h1 class="team-h"> The Zootopia Movie </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/zootopia.jpg')}}" alt="zootopia" style="width:100%;height:100%">
-                </div>
-            </div>
-
-            <div class="col-sm-2  p-3  text-white" data-filterable="movie horror">
-                <h1 class="team-h">The Dracula Movie </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/dracula.jpg')}}" alt="dracula" style="width:100%;height:100%">
-                </div>
-            </div>
-
-            <div class="col-sm-2  p-3  text-white" data-filterable="book comedy">
-                <h1 class="team-h"> One of Those Days </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/days.jpg')}}" alt="days" style="width:100%;height:100%">
-                </div>
-            </div>
-            <div class="col-sm-2 p-3 column text-white" data-filterable="movie comedy">
-                <h1 class="team-h"> Devil wears prada </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/devil.jpg')}}" alt="devil" style="width:100%;height:100%">
-                </div>
-            </div>
-            <div class="col-sm-2  p-3  text-white" data-filterable="book horror">
-                <h1 class="team-h"> The IT horror movie</h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/it.jpg')}}" alt="it" style="width:100%;height:100%">
-                </div>
-            </div>
-            <div class="col-sm-2 p-3 column text-white" data-filterable="movie cartoon">
-                <h1 class="team-h"> Hotel Transylvania </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/hotel.jpg')}}" alt="hotel" style="width:100%;height:100%">
-                </div>
-            </div>
-            <div class="col-sm-2 p-3 column text-white" data-filterable="book action">
-                <h1 class="team-h"> The Fallout book </h1>
-                <div class="card " style="width:100%">
-                    <img class="card-img-top" src="{{asset('css/images/inspiration/fallout.jpg')}}" alt="fallout" style="width:100%;height:100%">
-                </div>
-            </div>
+            @endforeach
 
         </div>
     </div>
@@ -165,7 +97,7 @@
 
     // Assign event listener
     el_filters.forEach(el => el.addEventListener('change', applyFilter))
-    // Init
+
     applyFilter()
 </script>
     </body>

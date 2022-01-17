@@ -33,7 +33,7 @@
                                 </svg>
                             </a>
                         </h1>
-                    @endauth
+                    @endcan
                     <div class="card-body">
                         <h4 class="card-title" style="color: black">{{$article->subtitle}}</h4>
                         <p class="card-text" style="color: black">{{ ($article->teaser) }} </p>
