@@ -81,7 +81,7 @@
                 'aLengthMenu':[[5,10,25,50,-1],[5,10,25,50,'All']],
                 columns: [
                     {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-                    {data: 'name', name: 'user_id'},
+                    {data: 'name', name: 'name'},
                     {data: 'text', name: 'text'},
                     {data: 'rating', name: 'rating'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
