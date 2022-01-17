@@ -60,6 +60,7 @@
 
 
 }
+
 .bg-text_users_create{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
@@ -137,7 +138,7 @@
 
 .obrazok {
     width: 100%;
-    height:75%;
+    height:auto;
 }
 .text-event {
     width: 100%;
@@ -223,4 +224,110 @@
     border: 3px solid #f1f1f1;
     text-align: center;
     color: #f1f1f1;
+}
+
+/*______________________________________________________________________________________________________________________
+ARTICLES
+______________________________________________________________________________________________________________________*/
+/*index*/
+.column{
+    width: 90%;
+    height: 100%;
+}
+.article_image_show{
+    width:50%;
+    height:auto;
+    float:left;
+    margin-right: 1vw;
+}
+.contactIndex{
+margin-bottom:25%;
+}
+.btn-black3-contacts{
+    background-color: black;
+    color:white;
+    width:40%;
+    margin-top:10%;
+    margin-left: 10%;
+
+
+}
+/*show*/
+@media only screen and (max-width: 700px){
+    .article_image_show {
+        width: 100%;
+        height: auto;
+
+
+    }
+    .btn-black3-contacts{
+        background-color: black;
+        color:white;
+        width:55%;
+        margin-top: -20%;
+        margin-left:20%;
+
+
+    }
+    .contactIndex{
+        margin-top:30%;
+        margin-bottom:90%;
+        margin-left: 30%;
+
+    }
+    .form-margin{
+        margin-left: 20%;
+        margin-top: 50%;
+    }
+    .form-margin-users{
+        margin-left: 30%;
+        margin-top: 50%;
+    }
+    .form-custom {
+        /*background-color: black;*/
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.3); /* Black w/opacity/see-through */
+        color:white;
+        margin-top: 10%;
+        margin-left: 20%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+}
+
+
+
+.filterInputs input {
+    display: none;
+}
+
+.filterInputs label {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    user-select: none; /* prevent highlight */
+}
+
+.filterInputs i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 2px red ;
+    color: white;
+    z-index: -1;
+}
+
+.filterInputs input:checked + i {
+    background: red;
+    color: white !important;
+}
+
+
+/* HELPER CLASSES */
+
+.is-hidden {
+    display: none;
 }
