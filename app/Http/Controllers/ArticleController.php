@@ -92,7 +92,7 @@ class ArticleController extends Controller
         $request->validate([
         'title'=>'required|min:3|max:50',
         'subtitle'=>'required|min:3|max:100',
-        'image'=>'required',
+        'image'=>'required|mimes:jpg,gif,png',
         'text'=>'required',
     ]);
         $article->update($request->all());
