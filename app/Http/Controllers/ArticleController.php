@@ -17,6 +17,8 @@ class ArticleController extends Controller
         return view('article.index',[
             'articles'=> Article::all(),
         ]);
+
+
     }
 
     /**
@@ -26,7 +28,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('article.create', ['action' => route('article.store'), 'method' => 'post']);
+        return view('article.create', ['action' => route('articles.store'), 'method' => 'post']);
     }
 
     /**
@@ -36,12 +38,16 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    { //todo validation
+    {
+        $request->validate([
+        'title'=>'required|unique',
+        'subtitle'=>'required|unique',
+        'image'=>'required',
+        'text'=>'required',
+    ]);
 
-
-        $article = Article::create($request->all());
-        $article->save();
-        redirect()->route('article.index');
+        auth()->user()->articles()->create($request->all());
+        return redirect()->route('article.index');
     }
 
     /**
@@ -81,9 +87,13 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Article $article)
-    {//todo validation
-
-
+    {
+        $request->validate([
+        'title'=>'required',
+        'subtitle'=>'required',
+        'image'=>'required',
+        'text'=>'required',
+    ]);
         $article->update($request->all());
         return redirect()->route('article.index');
     }
